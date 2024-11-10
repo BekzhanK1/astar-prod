@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./astar/backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./astar/backend/db.sqlite3:/app/db.sqlite3
+    environment:
+      - DEBUG=1
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./Juzeng_react/juzeng_app
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

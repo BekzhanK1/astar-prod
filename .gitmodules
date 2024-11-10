@@ -1,0 +1,6 @@
+[submodule "Juzeng_react"]
+	path = Juzeng_react
+	url = https://github.com/naimaaan/Juzeng_react.git
+[submodule "astar"]
+	path = astar
+	url = https://github.com/BekzhanK1/astar.git
