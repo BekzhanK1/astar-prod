@@ -19,7 +19,7 @@ services:
       context: ./Juzeng_react/juzeng_app
       dockerfile: Dockerfile
     ports:
-      - "3000:80"
+      - "80:80"
     environment:
       - NODE_ENV=production
     networks:
